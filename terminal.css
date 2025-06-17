@@ -1,0 +1,155 @@
+:root {
+  --bg-dark: #0c0c0c;
+  --bg-light: #1e1e1e;
+  --accent: #3aa3ff;
+  --text: #e0e0e0;
+  --text-dim: #a0a0a0;
+  --error: #ff5555;
+  --success: #55ff55;
+  --warning: #ffff55;
+}
+
+.retro-terminal {
+  background-color: var(--bg-dark);
+  color: var(--text);
+  font-family: 'Cascadia Code', monospace;
+  height: 100vh;
+  margin: 0;
+  padding: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* CRT Effects */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVGhD7cExAQAwDMCg+zfd2VAk4JVPkCRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiT9zwZ4zAARQ0J6JQAAAABJRU5ErkJggg==');
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Terminal Container */
+.terminal-container {
+  background-color: var(--bg-light);
+  border: 1px solid rgba(58, 163, 255, 0.2);
+  box-shadow: 0 0 20px rgba(58, 163, 255, 0.1);
+  height: calc(100% - 16px);
+  width: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.terminal-header {
+  background: linear-gradient(to right, #1e1e1e, #2a2a2a);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(58, 163, 255, 0.1);
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.close { background-color: #ff5f56; }
+.minimize { background-color: #ffbd2e; }
+.maximize { background-color: #27c93f; }
+
+.title {
+  margin-left: 16px;
+  font-size: 12px;
+  color: var(--text-dim);
+  flex-grow: 1;
+}
+
+/* Terminal Body */
+.terminal-body {
+  flex-grow: 1;
+  padding: 12px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  line-height: 1.4;
+}
+
+.terminal-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Input Area */
+.terminal-input {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(58, 163, 255, 0.1);
+  position: relative;
+}
+
+.prompt {
+  color: var(--accent);
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+#commandInput {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'Cascadia Code', monospace;
+  flex-grow: 1;
+  outline: none;
+  caret-color: transparent;
+}
+
+.cursor {
+  position: absolute;
+  color: var(--accent);
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Text Effects */
+.glow {
+  text-shadow: 0 0 5px var(--accent);
+}
+
+.error { color: var(--error); }
+.success { color: var(--success); }
+.warning { color: var(--warning); }
+.dim { color: var(--text-dim); }

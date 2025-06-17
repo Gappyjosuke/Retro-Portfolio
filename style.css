@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'JetBrainsMonoNerd';
+  src: url('./fonts/JetBrainsMonoNLNerdFont-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --bg-gradient-start: #e2e2e2;
+  --bg-gradient-end: #303142;
+  --text-color: #000000;
+  --placeholder-color: #44444480;
+  --logo-hover-scale: 1.1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  font-family: 'JetBrainsMonoNerd', monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.logo {
+  font-family: 'JetBrainsMonoNerd';
+  font-size: clamp(60px, 15vw, 110px);
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(var(--logo-hover-scale));
+  cursor: pointer;
+}
+
+.input-box {
+  background: rgba(241, 241, 241, 0.64);
+  border: 1px solid #ccc;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: min(100%, 350px);
+  color: var(--text-color);
+  font-family: 'JetBrainsMonoNerd', monospace;
+  position: relative;
+}
+
+.input-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  font-size: clamp(14px, 3vw, 16px);
+  width: 100%;
+  font-family: inherit;
+  caret-color: var(--text-color);
+  position: relative;
+  z-index: 2;
+}
+
+.input-box input::placeholder {
+  color: var(--placeholder-color);
+  font-style: italic;
+  opacity: 0.6;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-wrapper {
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    font-size: clamp(50px, 20vw, 80px);
+  }
+  
+  .input-box {
+    padding: 0.75rem 1.5rem;
+  }
+}
