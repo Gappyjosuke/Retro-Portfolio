@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <meta name="description" content="Terminal-style developer portfolio">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terminal Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="main-wrapper">
-        <a href="https://www.kernel.org/" class="logo-link" target="_blank" aria-label="Linux Kernel">
-          <span class="logo" role="img" aria-hidden="true">&#xf17c;</span>
-        </a>
-        <div class="input-box">
-            <label for="usernameInput" class="sr-only">Enter your name</label>
-            <input id="usernameInput" type="text" placeholder="Hi Visitor, What's Your Name?" autofocus />
+<body class="retro-main">
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+  
+  <div class="main-container">
+    <div class="terminal-window">
+      <div class="window-header">
+        <div class="window-controls">
+          <span class="control close"></span>
+          <span class="control minimize"></span>
+          <span class="control maximize"></span>
         </div>
+        <div class="title">Guest Login — Windows Terminal</div>
+      </div>
+      
+      <div class="window-body">
+        <div class="logo">Sastha_Ruban@Portfolio:~$</div>
+        <div class="input-container">
+          <span class="prompt">login></span>
+          <input type="text" id="usernameInput" autofocus>
+          <div class="cursor" id="mainCursor">█</div>
+        </div>
+      </div>
     </div>
+  </div>
+
   <script src="main.js"></script>
 </body>
 </html>
