@@ -54,22 +54,27 @@ class RetroTerminal {
     });
   }
 
-  printWelcomeMessage() {
-    const welcomeMsg = `
-<span class="glow">███████╗ █████╗ ███████╗████████╗██╗  ██╗ █████╗     ██████╗ ██╗   ██╗██████╗ ██████╗  █████╗ ███╗   ██╗</span>
-<span class="glow">██╔════╝██╔══██╗██╔════╝╚══██╔══╝██║  ██║██╔══██╗    ██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██╗████╗  ██║</span>
-<span class="glow">███████╗███████║███████╗   ██║   ███████║███████║    ██████╔╝██║   ██║██████╔╝██████╔╝███████║██╔██╗ ██║</span>
-<span class="glow">╚════██║██╔══██║╚════██║   ██║   ██╔══██║██╔══██║    ██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██║██║╚██╗██║</span>
-<span class="glow">███████║██║  ██║███████║   ██║   ██║  ██║██║  ██║    ██║  ██║╚██████╔╝██████╔╝██║  ██║██║  ██║██║ ╚████║</span>
-<span class="glow">╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝</span>
-
-<span class="dim">Welcome to Sastha Ruban's Interactive Terminal Portfolio</span>
-<span class="dim">Type <span class="success">help</span> to see available commands</span>
-`;
-    this.typeWriter(welcomeMsg, 5, () => {
-      this.printPrompt();
-    });
-  }
+ printWelcomeMessage() {
+  const welcomeMsg = [
+    '<span class="glow">███████╗ █████╗ ███████╗████████╗██╗  ██╗ █████╗     ██████╗ ██╗   ██╗██████╗ ██████╗  █████╗ ███╗   ██╗</span>',
+    '<span class="glow">██╔════╝██╔══██╗██╔════╝╚══██╔══╝██║  ██║██╔══██╗    ██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██╗████╗  ██║</span>',
+    '<span class="glow">███████╗███████║███████╗   ██║   ███████║███████║    ██████╔╝██║   ██║██████╔╝██████╔╝███████║██╔██╗ ██║</span>',
+    '<span class="glow">╚════██║██╔══██║╚════██║   ██║   ██╔══██║██╔══██║    ██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██║██║╚██╗██║</span>',
+    '<span class="glow">███████║██║  ██║███████║   ██║   ██║  ██║██║  ██║    ██║  ██║╚██████╔╝██████╔╝██║  ██║██║  ██║██║ ╚████║</span>',
+    '<span class="glow">╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝</span>',
+    '',
+    '<span class="dim">Welcome to Sastha Ruban\'s Interactive Terminal Portfolio</span>',
+    '<span class="dim">Type <span class="success">help</span> to see available commands</span>'
+  ];
+  
+  // Print ASCII art immediately
+  this.printLines(welcomeMsg, true);
+  
+  // Then type the prompt with animation
+  this.typeWriter('', 5, () => {
+    this.printPrompt();
+  });
+ }
 
   processCommand() {
     const commandText = this.input.value.trim();
