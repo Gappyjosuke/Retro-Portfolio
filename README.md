@@ -1,7 +1,7 @@
 # VT340 Terminal Portfolio  
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
-[![Live Demo](https://img.shields.io/badge/Demo-Live-blue.svg)](https://yourusername.github.io/vt340-portfolio)  
+[![Live Demo](https://img.shields.io/badge/Demo-Live-blue.svg)](https://gappyjosuke.github.io/Retro-Portfolio/)  
 ![Vintage Tech](https://img.shields.io/badge/Retro-VT340_terminal-ff69b4)  
 
 An retro computing experience showcasing my developer portfolio through an authentic DEC VT340 terminal emulator with CRT effects and interactive commands.  
