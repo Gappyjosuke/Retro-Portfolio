@@ -10,8 +10,6 @@ An retro computing experience showcasing my developer portfolio through an authe
 
 ## Features  
 
----
-
 ### Authentic Terminal Experience  
 - **CRT Visual Effects**: Scanlines, phosphor glow, and screen flicker  
 - **Color Themes**: Green, Amber, Blue, and Monochrome modes  
@@ -36,7 +34,7 @@ An retro computing experience showcasing my developer portfolio through an authe
 ```
 ---
 
-###CRT Simulation Architecture
+### CRT Simulation Architecture
 ```mermaid
 graph LR
     A[HTML5 Canvas] --> B[CSS Filters]
@@ -47,7 +45,7 @@ graph LR
 ```
 ---
 
-###Project Structure
+### Project Structure
 ```text
 vt340-portfolio/
 ├── crt.css          # CRT effects
@@ -58,7 +56,7 @@ vt340-portfolio/
 ```
 ---
 
-###Keyboard Shortcuts
+### Keyboard Shortcuts
 Key Combination	Action
 Tab	Command autocomplete
 ↑/↓	Navigate history
@@ -66,7 +64,7 @@ Ctrl+C	Interrupt command
 
 ---
 
-###Acknowledgments
+### Acknowledgments
 
     DEC VT340 terminal for inspiration
 
