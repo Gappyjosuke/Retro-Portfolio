@@ -6,12 +6,18 @@
 
 An retro computing experience showcasing my developer portfolio through an authentic DEC VT340 terminal emulator with CRT effects and interactive commands.  
 
+---
+
 ## Features  
+
+---
 
 ### Authentic Terminal Experience  
 - **CRT Visual Effects**: Scanlines, phosphor glow, and screen flicker  
 - **Color Themes**: Green, Amber, Blue, and Monochrome modes  
-- **Audio Atmosphere**: Key clicks, boot sounds, and navigation beeps  
+- **Audio Atmosphere**: Key clicks, boot sounds, and navigation beeps
+  
+---
 
 ### Interactive Commands  
 ```bash
@@ -28,8 +34,9 @@ An retro computing experience showcasing my developer portfolio through an authe
 │ exit              │ End session                               │
 ╰───────────────────┴───────────────────────────────────────────╯
 ```
-echnical Highlights
-CRT Simulation Architecture
+---
+
+###CRT Simulation Architecture
 ```mermaid
 graph LR
     A[HTML5 Canvas] --> B[CSS Filters]
@@ -38,7 +45,9 @@ graph LR
     D --> E[Refresh Animation]
     E --> F[Color Themes]
 ```
-Project Structure
+---
+
+###Project Structure
 ```text
 vt340-portfolio/
 ├── crt.css          # CRT effects
@@ -47,13 +56,17 @@ vt340-portfolio/
 ├── index.html       # Main interface
 └── resume.pdf       # Downloadable resume
 ```
-Keyboard Shortcuts
+---
+
+###Keyboard Shortcuts
 Key Combination	Action
 Tab	Command autocomplete
 ↑/↓	Navigate history
 Ctrl+C	Interrupt command
 
-Acknowledgments
+---
+
+###Acknowledgments
 
     DEC VT340 terminal for inspiration
 
