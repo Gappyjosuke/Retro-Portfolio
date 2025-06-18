@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terminal Portfolio</title>
+  <title>VT340 Terminal</title>
   <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="crt.css">
+  <link rel="stylesheet" href="terminal.css">
+  <audio id="navSound" src="https://assets.mixkit.co/sfx/preview/mixkit-modern-click-box-check-1120.mp3"
+    preload="auto"></audio>
+  <audio id="themeSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3"
+    preload="auto"></audio>
 </head>
-<body class="retro-main">
-  <div class="scanlines"></div>
-  <div class="noise"></div>
-  
-  <div class="main-container">
-    <div class="terminal-window">
-      <div class="window-header">
-        <div class="window-controls">
-          <span class="control close"></span>
-          <span class="control minimize"></span>
-          <span class="control maximize"></span>
+
+<body class="retro-main crt-green">
+  <div class="crt-housing">
+    <div class="crt-bevel">
+      <div class="crt-screen crt-curve crt-flicker">
+        <!-- CRT Visual Effects -->
+        <div class="crt-overlay"></div>
+        <div class="crt-reflection"></div>
+        <div class="crt-scanlines"></div>
+        <div class="crt-bloom"></div>
+        <div class="crt-burn"></div>
+        <div class="crt-glass"></div>
+
+        <!-- Terminal Content -->
+        <div class="terminal-container">
+          <div class="terminal-window">
+            <div class="window-header">
+              <div class="window-controls">
+                <span class="control close" title="Exit Terminal" id="exitTerminal"></span>
+                <span class="control minimize" title="Minimize"></span>
+                <span class="control maximize" title="Full Screen"></span>
+              </div>
+              <div class="title phosphor-text" id="terminalTitle">VT340 Terminal</div>
+            </div>
+
+            <div class="window-body">
+              <div id="terminal" class="terminal-content"></div>
+              <div class="input-container">
+                <span id="dynamicPrompt" class="prompt phosphor-text">guest@vt340:~$</span>
+                <input type="text" id="commandInput" autofocus spellcheck="false" class="phosphor-text crt-input">
+                <div class="cursor crt-cursor phosphor-text" id="cursor">█</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="title">Guest Login — Windows Terminal</div>
       </div>
-      
-      <div class="window-body">
-        <div class="logo">Sastha_Ruban@Portfolio:~$</div>
-        <div class="input-container">
-          <span class="prompt">login></span>
-          <input type="text" id="usernameInput" autofocus>
-          <div class="cursor" id="mainCursor">█</div>
-        </div>
+      <div class="nav-controls">
+        <button class="dim nav-button  prev">◄ </button>
+        <button class="dim nav-button  next"> ►</button>
       </div>
+
+      <!-- VT340 Branding -->
+      <div class="monitor-branding">
+        <div class="dim model-number">VT340</div>
+        <div class="manufacturer">DIGITAL EQUIPMENT CORPORATION</div>
+        <div class="features">ReGIS Graphics • Sixel • 256 Colors</div>
+      </div>
+
+      <!-- Physical Controls -->
+      <div class="monitor-controls">
+        <div class="etstcontrol-knob brightness" title="Brightness"></div>
+        <div class="contrast" title="Contrast"></div>
+        <div class="power-button" title="Change Theme"></div>
+      </div>
+    </div>
+
+    <!-- CRT Base -->
+    <div class="crt-base">
+      <div class="tilt-adjustment"></div>
+      <div class="vent-slots"></div>
     </div>
   </div>
 
-  <script src="main.js"></script>
+  <script src="terminal.js"></script>
 </body>
+
 </html>
