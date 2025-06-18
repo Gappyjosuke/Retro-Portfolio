@@ -30,21 +30,23 @@ An retro computing experience showcasing my developer portfolio through an authe
 ```
 echnical Highlights
 CRT Simulation Architecture
+```mermaid
 graph LR
     A[HTML5 Canvas] --> B[CSS Filters]
     B --> C[Scanline Overlay]
     C --> D[Phosphor Glow]
     D --> E[Refresh Animation]
     E --> F[Color Themes]
-
+```
 Project Structure
+```text
 vt340-portfolio/
 ├── crt.css          # CRT effects
 ├── terminal.css     # Terminal styles
 ├── terminal.js      # Interactive logic
 ├── index.html       # Main interface
 └── resume.pdf       # Downloadable resume
-
+```
 Keyboard Shortcuts
 Key Combination	Action
 Tab	Command autocomplete
