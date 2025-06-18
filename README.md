@@ -28,8 +28,8 @@ An retro computing experience showcasing my developer portfolio through an authe
 │ exit              │ End session                               │
 ╰───────────────────┴───────────────────────────────────────────╯
 ```
-###Technical Highlights
-##CRT Simulation Architecture
+echnical Highlights
+CRT Simulation Architecture
 graph LR
     A[HTML5 Canvas] --> B[CSS Filters]
     B --> C[Scanline Overlay]
@@ -37,7 +37,7 @@ graph LR
     D --> E[Refresh Animation]
     E --> F[Color Themes]
 
-##Project Structure
+Project Structure
 vt340-portfolio/
 ├── crt.css          # CRT effects
 ├── terminal.css     # Terminal styles
