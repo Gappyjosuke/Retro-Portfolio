@@ -1,0 +1,245 @@
+/* ===== CRT CORE ===== */
+:root {
+  /* Color Themes */
+  --amber: #ffb000;
+  --phosphor-green: #33ff33;
+  --terminal-blue: #5dd8ff;
+  --monochrome: #cccccc;
+
+
+  /* CRT Physical Properties */
+  --crt-bezel: #2a2a2a;
+  --crt-shadow: #111;
+  --crt-highlight: #3a3a3a;
+}
+
+/* ===== THEMES ===== */
+.crt-amber {
+  --text-color: var(--amber);
+  --scanline: rgba(255, 176, 0, 0.08);
+  --glow: 0 0 10px rgba(255, 176, 0, 0.7);
+  --reflection: rgba(255, 200, 100, 0.1);
+}
+
+.crt-green {
+  --text-color: var(--phosphor-green);
+  --scanline: rgba(0, 255, 50, 0.05);
+  --glow: 0 0 10px rgba(51, 255, 51, 0.7);
+  --reflection: rgba(100, 255, 100, 0.1);
+}
+
+.crt-blue {
+  --text-color: var(--terminal-blue);
+  --scanline: rgba(100, 200, 255, 0.05);
+  --glow: 0 0 10px rgba(93, 216, 255, 0.7);
+  --reflection: rgba(150, 220, 255, 0.1);
+}
+
+.crt-monochrome {
+  --text-color: var(--monochrome);
+  --scanline: rgba(255, 255, 255, 0.05);
+  --glow: 0 0 5px rgba(255, 255, 255, 0.5);
+  --reflection: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== MONITOR FRAME ===== */
+.crt-housing {
+
+  width: 96.5vw;
+  height: 93vh;
+  margin: 0;
+  padding: 2rem; /* reduced from 100px to avoid overflow */
+  background: linear-gradient(160deg, #1a1a1a 0%, #2a2a2a5e 100%);
+  border-radius: 3;
+  box-shadow:
+    0 0 20px rgba(232, 236, 232, 0.4),        /* outer green glow */
+    0 0 40px rgba(229, 233, 229, 0.288),        /* larger glow */
+    0 15px 35px rgba(0, 0, 0, 0),       /* existing soft drop shadow */
+    inset 0 -5px 15px rgba(0, 0, 0, 0); /* existing inner shadow */
+  position: relative;
+}
+
+/* IBM/DEC Style Branding */
+.crt-branding {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #777;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.crt-branding::before {
+  content: "◄ IBM 5150 Compatible ►";
+}
+
+/* ===== SCREEN EFFECTS ===== */
+.crt-screen {
+  position: relative;
+  background-color: #020302;
+  border: 10px solid var(--crt-bezel);
+  border-radius: 8px;
+  overflow: hidden;
+  transform: perspective(800px) rotateX(5deg);
+  mask-image: radial-gradient(circle at center,
+      white 65%,
+      transparent 110%);
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.8),
+    0 0 0 2px var(--crt-highlight);
+}
+
+/* Phosphor Text */
+.phosphor-text {
+  color: var(--text-color);
+  text-shadow: var(--glow);
+  font-weight: 500;
+}
+
+/* Scanlines */
+.crt-scanlines {
+  background: repeating-linear-gradient(to bottom,
+      transparent 0%,
+      var(--scanline) 0.5%,
+      transparent 1.2%);
+  mix-blend-mode: overlay;
+}
+
+/* Bloom Effect */
+.crt-bloom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center,
+      transparent 60%,
+      var(--text-color) 120%);
+  opacity: 0.1;
+  mix-blend-mode: screen;
+}
+
+/* Flicker Animation */
+@keyframes crt-flicker {
+
+  0%,
+  100% {
+    opacity: 0.95;
+  }
+
+  20% {
+    opacity: 0.9;
+  }
+
+  40% {
+    opacity: 0.87;
+  }
+
+  60% {
+    opacity: 0.93;
+  }
+
+  80% {
+    opacity: 0.89;
+  }
+}
+
+.crt-flicker {
+  animation: crt-flicker 0.2s infinite alternate;
+}
+
+/* Burn-in Effect */
+.crt-burn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(to right,
+      rgba(2, 3, 2, 0.9) 0%,
+      transparent 2%,
+      transparent 98%,
+      rgba(2, 3, 2, 0.9) 100%),
+    linear-gradient(to bottom,
+      rgba(2, 3, 2, 0.9) 0%,
+      transparent 2%,
+      transparent 98%,
+      rgba(2, 3, 2, 0.9) 100%);
+  pointer-events: none;
+}
+
+/* VT340 Specific Branding */
+.monitor-branding {
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.model-number {
+  font-weight: bold;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.manufacturer {
+  margin: 3px 0;
+}
+
+.features {
+  font-size: 0.6rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Power Button */
+.power-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(221, 0, 0, 0.452), rgb(175, 5, 5));
+  box-shadow:
+    0 0 5px rgba(200, 0, 0, 0.8),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.power-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(200, 0, 0, 0.9);
+}
+
+.power-button:active {
+  transform: scale(0.95);
+  background: radial-gradient(circle at 30% 30%, #f00, #800);
+}
+
+/* VT340 Base Styling */
+.crt-base {
+  background: linear-gradient(to bottom, #222, #1a1a1a);
+  height: 30px;
+  margin-top: 100px;
+  border-radius: 0 0 8px 8px;
+  position: relative;
+}
+
+.vent-slots {
+  background: repeating-linear-gradient(to right,
+      transparent,
+      transparent 10px,
+      #333232 10px,
+      #333 12px);
+  height: 8px;
+  width: 99%;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+}
