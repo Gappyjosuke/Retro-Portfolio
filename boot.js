@@ -85,9 +85,9 @@ function typeNextLine() {
   } else {
     setTimeout(() => {
       window.location.href = "terminal.html";
-    }, 1500);
+    }, 0);
   }
 }
 
 // Start the boot sequence
-setTimeout(typeNextLine, 1000);
+setTimeout(typeNextLine, 0);
