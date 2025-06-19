@@ -176,7 +176,7 @@
 .monitor-branding {
   font-family: 'Courier New', monospace;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
   color: #777;
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -190,7 +190,8 @@
 }
 
 .manufacturer {
-  margin: 3px 0;
+  margin: 4px 0;
+ 
 }
 
 .features {
@@ -201,13 +202,14 @@
 
 /* Power Button */
 .power-button {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 30px;
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, rgba(221, 0, 0, 0.452), rgb(175, 5, 5));
   box-shadow:
     0 0 5px rgba(200, 0, 0, 0.8),
     inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  filter: blur(1.5px);
   cursor: pointer;
   transition: all 0.3s;
 }
