@@ -212,6 +212,11 @@
   filter: blur(1.5px);
   cursor: pointer;
   transition: all 0.3s;
+  position: absolute;
+  left: 70px;    /* Distance from right edge */
+  top: 50%;       /* Center vertically */
+  transform: translateY(-50%); /* Perfect vertical centering */
+  z-index: 10;    /* Ensure it stays above other elements */
 }
 
 .power-button:hover {
