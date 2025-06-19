@@ -5,15 +5,12 @@ class VT340Terminal {
     this.cursor = document.getElementById('cursor');
     this.prompt = document.getElementById('dynamicPrompt');
     this.username = sessionStorage.getItem('terminalUsername') || 'guest';
-    this.bootSound = new Audio('bootsound.mp3'); // Same directory as HTML file
-    this.bootSound.loop = true; // Makes it loop forever
-    this.bootSound.volume = 0.3; // 30% volume
     this.currentSection = 0;
     this.sections = ['welcome', 'about', 'education', 'skills', 'projects'];
     this.commandHistory = [];
     this.historyIndex = -1;
 
-    document.querySelector('.crt-screen').style.height = '500px';
+    document.querySelector('.crt-screen').style.height = '530px';
     document.querySelector('.terminal-container').style.height = '100%';
 
     // VT340 Color Themes
@@ -160,6 +157,7 @@ class VT340Terminal {
 
     // Play boot sound
     this.playSound('bootsound.mp3', 0.3);
+    this.playSound()
   }
 
   applyTheme(theme) {
