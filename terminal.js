@@ -164,7 +164,7 @@ class VT340Terminal {
 
 
   }
- //---------new audio add thing[10:14]
+  //---------new audio add thing[10:14]
   initAudio() {
     // Create audio context after user interaction
     document.addEventListener('click', () => {
@@ -180,29 +180,29 @@ class VT340Terminal {
     // Create the switch container (looks like a physical DPDT switch)
     const switchContainer = document.createElement('div');
     switchContainer.className = 'dpdt-switch-container';
-  
+
     // Create the toggle lever (moves up/down)
     const toggleLever = document.createElement('div');
     toggleLever.className = 'toggle-lever';
-  
+
     // Create the LED indicator (glows green when on)
     const ledIndicator = document.createElement('div');
     ledIndicator.className = 'led-indicator';
-  
+
     // Assemble the switch
     switchContainer.appendChild(ledIndicator);
     switchContainer.appendChild(toggleLever);
-    document.body.appendChild(switchContainer);
+    document.querySelector('.music-toggle-container').appendChild(switchContainer);
 
     // Add retro terminal styling
     const style = document.createElement('style');
     style.textContent = `
       /* Main switch housing (like a lab equipment toggle) */
       .dpdt-switch-container {
-        position: fixed;
-        bottom: 183px;
-        right: 36px;
-        width: 170px;
+        position: absolute;
+        bottom: 190px;
+        right: 29px;
+        width: 30px;
         height: 50px;
         background: #222;
         border: 0px solid #111;
@@ -218,10 +218,9 @@ class VT340Terminal {
         cursor: pointer;
         z-index: 1000;
       }
-
       /* Toggle lever (moves up/down) */
       .toggle-lever {
-        width: 130px;
+        width: 25px;
         height: 15px;
         background: #333;
         border: 1px solid #111;
@@ -276,7 +275,7 @@ class VT340Terminal {
     switchContainer.addEventListener('click', () => {
       // Play the sound on every toggle
       playBreakerSound();
-      
+
       if (this.isMusicPlaying) {
         this.backgroundMusic.pause();
         switchContainer.classList.remove('active');
@@ -294,7 +293,7 @@ class VT340Terminal {
     audio.play().catch(e => console.error("Audio playback failed:", e));
   }
 
- //-----new audi add thing---[10:14]
+  //-----new audi add thing---[10:14]
 
   applyTheme(theme) {
     const colors = this.themes[theme];
