@@ -83,10 +83,10 @@
   border: 10px solid var(--crt-bezel);
   border-radius: 8px;
   overflow: hidden;
-  transform: perspective(800px) rotateX(5deg);
+  transform: perspective(900px) rotateX(5deg);
   mask-image: radial-gradient(circle at center,
-      white 65%,
-      transparent 110%);
+      rgb(255, 255, 255) 65%,
+      transparent 400%);
   box-shadow:
     inset 0 0 30px rgba(0, 0, 0, 0.8),
     0 0 0 2px var(--crt-highlight);
