@@ -199,11 +199,9 @@ class VT340Terminal {
     style.textContent = `
       /* Main switch housing (like a lab equipment toggle) */
       .dpdt-switch-container {
-        position: absolute;
-        bottom: 190px;
         right: 29px;
         width: 30px;
-        height: 50px;
+        height: 45px;
         background: #222;
         border: 0px solid #111;
         border-radius: 1px;
@@ -217,6 +215,10 @@ class VT340Terminal {
         padding: 5px 0;
         cursor: pointer;
         z-index: 1000;
+      }
+      .monitor-controls {
+          position: absolute;
+      /* This makes the absolute positioning of children relative to this container */
       }
       /* Toggle lever (moves up/down) */
       .toggle-lever {
