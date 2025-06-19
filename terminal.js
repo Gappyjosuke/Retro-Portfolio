@@ -10,6 +10,13 @@ class VT340Terminal {
     this.commandHistory = [];
     this.historyIndex = -1;
 
+    //-----new add ------------------------[10 :13]
+    this.backgroundMusic = null;
+    this.isMusicPlaying = false;
+    this.initAudio();
+    this.addMusicToggle();
+    //----new add end ---------------------[10:13]
+
     document.querySelector('.crt-screen').style.height = '530px';
     document.querySelector('.terminal-container').style.height = '100%';
 
@@ -155,10 +162,139 @@ class VT340Terminal {
     this.setupEventListeners();
     this.showSection(0); // Start with welcome section
 
-    // Play boot sound
-    this.playSound('bootsound.mp3', 0.3);
-    this.playSound()
+
   }
+ //---------new audio add thing[10:14]
+  initAudio() {
+    // Create audio context after user interaction
+    document.addEventListener('click', () => {
+      if (!this.backgroundMusic) {
+        this.backgroundMusic = new Audio('bootsound.mp3');
+        this.backgroundMusic.volume = 0.3;
+        this.backgroundMusic.loop = true;
+      }
+    }, { once: true });
+  }
+  // music olsd----------------
+  addMusicToggle() {
+    // Create the switch container (looks like a physical DPDT switch)
+    const switchContainer = document.createElement('div');
+    switchContainer.className = 'dpdt-switch-container';
+  
+    // Create the toggle lever (moves up/down)
+    const toggleLever = document.createElement('div');
+    toggleLever.className = 'toggle-lever';
+  
+    // Create the LED indicator (glows green when on)
+    const ledIndicator = document.createElement('div');
+    ledIndicator.className = 'led-indicator';
+  
+    // Assemble the switch
+    switchContainer.appendChild(ledIndicator);
+    switchContainer.appendChild(toggleLever);
+    document.body.appendChild(switchContainer);
+
+    // Add retro terminal styling
+    const style = document.createElement('style');
+    style.textContent = `
+      /* Main switch housing (like a lab equipment toggle) */
+      .dpdt-switch-container {
+        position: fixed;
+        bottom: 183px;
+        right: 36px;
+        width: 170px;
+        height: 50px;
+        background: #222;
+        border: 0px solid #111;
+        border-radius: 1px;
+        box-shadow: 
+          inset 0 0 5px #000,
+          1px 1px 2px #444;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 0;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      /* Toggle lever (moves up/down) */
+      .toggle-lever {
+        width: 130px;
+        height: 15px;
+        background: #333;
+        border: 1px solid #111;
+        border-radius: 2px;
+        transition: transform 0.2s ease;
+        box-shadow: 
+          0 2px 0 #111,
+          inset 0 1px 2px #555;
+      }
+
+      /* LED indicator (off state) */
+      .led-indicator {
+        width: 6px;
+        height: 7px;
+        background:rgb(255, 7, 7);
+        border-radius: 50%;
+        filter: blur(1px);
+        box-shadow: 
+          inset 0 0 3px #000,
+          0 0 2px #111;
+        transition: background 0.2s ease;
+      }
+
+      /* ON state (lever moves up, LED glows green) */
+      .dpdt-switch-container.active .toggle-lever {
+        transform: translateY(-15px);
+        background: #444;
+        box-shadow: 
+          0 -2px 0 #111,
+          inset 0 -1px 2px #777;
+      }
+
+      .dpdt-switch-container.active .led-indicator {
+        background: #a0ffa0;
+        box-shadow: 
+          0 0 3px #00ff00,
+          0 0 4px #a0ffa0,
+          0 0 8px rgba(160, 255, 160, 0.5);
+        filter: blur(1.5px);
+      }
+    `;
+    document.head.appendChild(style);
+
+    // ===== NEW: Play breaker.mp3 on toggle =====
+    const playBreakerSound = () => {
+      const sound = new Audio('breaker.mp3'); // Load from same directory
+      sound.volume = 0.3; // Adjust volume to your preference
+      sound.play().catch(e => console.log("Sound playback blocked:", e));
+    };
+
+    // Toggle switch on click
+    switchContainer.addEventListener('click', () => {
+      // Play the sound on every toggle
+      playBreakerSound();
+      
+      if (this.isMusicPlaying) {
+        this.backgroundMusic.pause();
+        switchContainer.classList.remove('active');
+      } else {
+        this.backgroundMusic.play().catch(e => console.error("Audio error:", e));
+        switchContainer.classList.add('active');
+      }
+      this.isMusicPlaying = !this.isMusicPlaying
+    });
+  }
+
+  playSound(file, volume) {
+    const audio = new Audio(file);
+    audio.volume = volume;
+    audio.play().catch(e => console.error("Audio playback failed:", e));
+  }
+
+ //-----new audi add thing---[10:14]
 
   applyTheme(theme) {
     const colors = this.themes[theme];
