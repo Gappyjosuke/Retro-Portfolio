@@ -37,6 +37,17 @@ body {
   margin: 15px 0;
 }
 
+.custom-font {
+    font-family: 'Assets/Fonts/Glass_TTY_VT220.ttf';
+    letter-spacing: 2.2px; 
+}
+
+.about-header {
+    font-family: 'Assets/Fonts/Glass_TTY_VT220.ttf';
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
 .nav-button {
   background: rgba(0, 0, 0, 0.3);
   border: 10px solid var(--text-color);
@@ -73,15 +84,10 @@ body {
 }
 
 .input-container {
-  margin-top: auto;
-  /* Pushes input to bottom */
-}
-
-
-.input-container {
   display: flex;
   align-items: center;
-  position: relative;
+  position: relative; /* This is the anchor for the cursor */
+  width: 100%;
 }
 
 #commandInput {
@@ -93,7 +99,19 @@ body {
   padding: 2px 5px;
   flex-grow: 1;
   outline: none;
-  caret-color: var(--text-color);
+  /* HIDE the default vertical line cursor */
+  caret-color: transparent; 
+}
+.success {
+  color: #00ff41; /* Or your theme color */
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+  font-weight: bold;
+}
+#cursor {
+  position: absolute;
+  left: 224px; 
+  pointer-events: none; 
+  transition: transform 0.05s linear; /* Makes movement snappy */
 }
 
 /* Navigation controls */
@@ -553,3 +571,52 @@ body {
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
+
+.starfield-container {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Adjust based on your layout */
+    overflow: hidden;
+    margin-top: 20px;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--text-color); /* Adds a neon glow */
+    opacity: 0;
+    font-family: monospace;
+    animation: star-float 4s linear infinite;
+    will-change: transform, opacity; /* Optimizes performance for many stars */
+}
+
+@keyframes star-float {
+    0% {
+        transform: translateY(20px) scale(0.5);
+        opacity: 0;
+    }
+    20% { opacity: 0.8; }
+    80% { opacity: 0.8; }
+    100% {
+        transform: translateY(-100px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+#terminal {
+    position: relative; /* Container for absolute stars */
+    z-index: 1;
+}
+
+.starfield-container {
+    pointer-events: none;
+    z-index: -1; /* Puts stars behind the text */
+}
+
+/* Ensure your text spans/divs have higher z-index if needed */
+.section-slide, .education-card, .story-paragraph {
+    position: relative;
+    z-index: 2;
+}
+
