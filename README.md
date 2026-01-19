@@ -28,11 +28,11 @@ This project didn't start in a code editor; it started on paper. During a 3rd-ye
   <table>
     <tr>
       <td align="center">
-        <img src="media/sketch1.png" width="300px"><br>
+        <img src="Media/sketch1.png" width="300px"><br>
         <sub>Initial Layout Sketch</sub>
       </td>
       <td align="center">
-        <img src="media/sketch2.png" width="300px"><br>
+        <img src="Media/sketch2.png" width="300px"><br>
         <sub>Command Logic Planning</sub>
       </td>
     </tr>
