@@ -211,6 +211,7 @@ class VT340Terminal {
         right: 29px;
         width: 30px;
         height: 45px;
+        transform: translateY(-35px);
         background: #222;
         border: 0px solid #111;
         border-radius: 1px;
@@ -667,7 +668,7 @@ class VT340Terminal {
       `  <span class="custom-font success skill-item scanline-text flicker">AUTHENTICATED : ${this.username} (˶ᵔ ᵕ ᵔ˶) ♡ </span>`,
       '  <div class="education-header skill-item  scanline-text flicker">',
       '  <div class="about-specializations flicker">',
-      '  <div class="asccent custom-font flicker category-title skill-item scanline-text">AVAIABLE COMMANDS :</div>',
+      '  <span class="asccent custom-font flicker category-title skill-item scanline-text">AVAIABLE COMMANDS :</span>',
       '  <div class="education-header skill-item flicker scanline-text">',
       '  <div class="skills-category skill-item flicker scanline-text">',
       '  <span class=" dim skill-item blink   github-link"> ☁︎ ABOUT      - Pulls my bio and system identity</span>',
@@ -694,7 +695,7 @@ class VT340Terminal {
       '    <span class="custom-font skills-header glow-text flicker">>_I AM SASTHA RUBAN U ⋆｡°✩⋆⭒˚.⋆⋆✴︎˚｡⋆*ੈ✩‧₊⋆.˚ ☾⭒.˚˚⌯✈︎</span>',
       '  <div class="education-header skill-item scanline-text flicker">',
       '  <div class="skills-category skill-item scanline-text flicker">',
-      '    <div class=" dim category-title flicker skill-item scanline-text">COMPUTER ENGINEER FOCUSED ON SYSTEMS, COMPILERS, LOW POLY BLENDERS AND MAKE VIDEO GAMES FOR FUN. I BREAK THINGS, REBUILD THEM, AND LEARN WHY THEY WORK.</div>',
+      '    <span class=" dim category-title flicker skill-item scanline-text">COMPUTER ENGINEER FOCUSED ON SYSTEMS, COMPILERS, LOW POLY BLENDERS AND MAKE VIDEO GAMES FOR FUN. I BREAK THINGS, REBUILD THEM, AND LEARN WHY THEY WORK.</span>',
       '  </div>',
       '  ',
       '  <div class="education-header skill-item  flicker scanline-text">',
@@ -710,7 +711,7 @@ class VT340Terminal {
       '  </div>',
       '  ',
       '  <div class="about-specializations flicker">',
-      '  <div class="asccent category-title flicker skill-item scanline-text">SUBJECTS WHICH I LIKED THE MOST</div>',
+      '  <span class="asccent category-title flicker skill-item scanline-text">SUBJECTS WHICH I LIKED THE MOST</span>',
       '  <div class="education-header skill-item flicker scanline-text">',
       '  <div class="skills-category skill-item flicker scanline-text">',
       '    <div class="specialization-items scanline-text flicker skill-item scanline-tex">',
@@ -772,19 +773,14 @@ class VT340Terminal {
       '  <span class="custom-font skills-header glow-text flicker ">>_ TOOLS & TECHNOLOGIES I ACTUALLY USED  𓀓𓀝 ⋆｡°✩⋆⭒˚.⋆⋆✴︎˚｡⋆*ੈ✩‧₊⋆.˚ ☾⭒.˚˚⌯✈︎</span>',
       '  <div class="education-header skill-item flicker scanline-text">',
       '  <div class="skills-category skill-item flicker scanline-text">',
-      '    <div style="visibility:hidden;" class="story-paragraph flicker  scanline-text">(˶ᵔ ᵕ ᵔ˶) To be honest, if you’re just here for a quick check and don’t want all this yapping,you can always download my resume by typing “resume”.Anywaysss, let me continue — this section is basically a chronological mess of my phases.</div>',
+      '    <span style="visibility:hidden;" class="story-paragraph flicker  scanline-text">(˶ᵔ ᵕ ᵔ˶) To be honest, if you’re just here for a quick check and don’t want all this yapping,you can always download my resume by typing “resume”.Anywaysss, let me continue — this section is basically a chronological mess of my phases.</span>',
       '  <div class=" skill-item flicker scanline-text">',
-      '    <div style="visibility:hidden;" class="story-paragraph  flicker  scanline-text">It all started with Linux.I tried Arch the hard way, broke my PC more times than I can count,spent almost an entire semester just customizing, distro hopping, Hyprland setups.I’m comfortable with Linux now — operating systems, bootloaders, kernels,and breaking things.Then theory of computation and compiler design hooked me.I built a full repository for Anna University’s compiler design lab experiments.I tried to make a Extension for Zoho cliq competition and I messed up (╥‸╥)</div>',
+      '    <span style="visibility:hidden;" class="story-paragraph  flicker  scanline-text">It all started with Linux.I tried Arch the hard way, broke my PC more times than I can count,spent almost an entire semester just customizing, distro hopping, Hyprland setups.I’m comfortable with Linux now — operating systems, bootloaders, kernels,and breaking things.Then theory of computation and compiler design hooked me.I built a full repository for Anna University’s compiler design lab experiments.I tried to make a Extension for Zoho cliq competition and I messed up (╥‸╥)</span>',
       '  <div class=" skill-item flicker scanline-text">',
-      '    <div style="visibility:hidden;" class=" story-paragraph  flicker  scanline-text">Somewhere in between, a friend introduced me to Android Studio.I made several very broken mobile apps:a music player I still don’t know how to fix,a broken chess app,and a CGPA calculator I made for myself so I’d stop calculating grades manually.(I forgot to handle a C grade.Why are you guys getting C grades anyway? Please do better ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧.</div>',            
+      '    <span style="visibility:hidden;" class=" story-paragraph  flicker  scanline-text">Somewhere in between, a friend introduced me to Android Studio.I made several very broken mobile apps:a music player I still don’t know how to fix,a broken chess app,and a CGPA calculator I made for myself so I’d stop calculating grades manually.(I forgot to handle a C grade.Why are you guys getting C grades anyway? Please do better ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧.</span>',            
       '  <div class="skills-category skill-item flicker scanline-text">',
-      '    <div style="visibility:hidden;" class=" story-paragraph  flicker  scanline-text">For about a semester, I just messed around with mobile apps for fun.Then I got really bored of web development.Next semester, network security clicked.I did basic home lab networking, Kali Linux stuff,played with Wireshark, Nmap, Python, and Bash.Then for half a semester, I did nothing productive and just played basketball.Now, in my final year, I’m working with Blender — making low-poly assets,doing basic animations, and moving everything into Unreal Engine.The goal is to wrap up this semester by building a game prototype.I’m slowly getting the hang of it… and yeah, that’s pretty much the journey so far ^._.^ฅ.</div>',
+      '    <span style="visibility:hidden;" class=" story-paragraph  flicker  scanline-text">For about a semester, I just messed around with mobile apps for fun.Then I got really bored of web development.Next semester, network security clicked.I did basic home lab networking, Kali Linux stuff,played with Wireshark, Nmap, Python, and Bash.Then for half a semester, I did nothing productive and just played basketball.Now, in my final year, I’m working with Blender — making low-poly assets,doing basic animations, and moving everything into Unreal Engine.The goal is to wrap up this semester by building a game prototype.I’m slowly getting the hang of it… and yeah, that’s pretty much the journey so far ^._.^ฅ.</span>',
       '  </div>',
-      '  <div class="skills-category flicker">',
-      '  </div>',
-      '  <div class="skills-category flicker">',
-      '  </div>',
-      '  <div class="skills-category flicker">',
       '</div>'
     ].join('\n');
 

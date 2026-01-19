@@ -42,15 +42,27 @@
   --reflection: rgba(255, 255, 255, 0.05);
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  min-width: 1200px;
+  overflow-x: auto; /* Adds horizontal scroll on tiny screens */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+}
 /* ===== MONITOR FRAME ===== */
+
 .crt-housing {
 
-  width: 96.5vw;
-  height: 93vh;
-  margin: 0;
+  width: 1490px;
+  height: 800px;
+  margin: 0 auto;
   padding: 2rem; /* reduced from 100px to avoid overflow */
   background: linear-gradient(160deg, #1a1a1a 0%, #2a2a2a5e 100%);
-  border-radius: 3;
+  border-radius: 3px;
   box-shadow:
     0 0 20px rgba(232, 236, 232, 0.4),        /* outer green glow */
     0 0 40px rgba(229, 233, 229, 0.288),        /* larger glow */
@@ -214,7 +226,7 @@
   transition: all 0.3s;
   position: absolute;
   left: 70px;
-  top: 50%;
+  top: -10%;
   /* Keep this base transform */
   transform: translateY(-50%); 
   z-index: 10;
@@ -238,9 +250,16 @@
 .crt-base {
   background: linear-gradient(to bottom, #222, #1a1a1a);
   height: 30px;
-  margin-top: 100px;
+  margin-top: 80px;
   border-radius: 0 0 8px 8px;
   position: relative;
+
+  /* --- ADJUST THESE THREE VALUES --- */
+  /* translate(Left/Right, Up/Down) | scale(Size) */
+  transform: translate(0px, -35px) scale(1); 
+  
+  /* Ensure the scaling doesn't make it look blurry */
+  image-rendering: pixelated; 
 }
 
 .vent-slots {

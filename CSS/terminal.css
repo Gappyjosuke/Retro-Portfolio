@@ -155,20 +155,6 @@ body {
   color: #ff5555;
 }
 
-.skill-meter {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  margin: 0 5px;
-  vertical-align: middle;
-}
-
-.skill-level {
-  display: block;
-  height: 100%;
-  background: var(--text-color);
-}
 
 /* Section-specific styles */
 .section-slide {
