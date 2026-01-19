@@ -668,7 +668,7 @@ class VT340Terminal {
       `  <span class="custom-font success skill-item scanline-text flicker">AUTHENTICATED : ${this.username} (˶ᵔ ᵕ ᵔ˶) ♡ </span>`,
       '  <div class="education-header skill-item  scanline-text flicker">',
       '  <div class="about-specializations flicker">',
-      '  <span class="asccent custom-font flicker category-title skill-item scanline-text">AVAIABLE COMMANDS :</span>',
+      '  <span class="asccent custom-font flicker category-title skill-item scanline-text">AVAILABLE COMMANDS :</span>',
       '  <div class="education-header skill-item flicker scanline-text">',
       '  <div class="skills-category skill-item flicker scanline-text">',
       '  <span class=" dim skill-item blink   github-link"> ☁︎ ABOUT      - Pulls my bio and system identity</span>',
