@@ -485,7 +485,7 @@ class VT340Terminal {
       '  <div class="about-specializations flicker">',
       '<div class="education-card"><span class="error custom-font flicker">༻❁✿❀༺ AVAILABLE COMMANDS ༻❁✿❀༺ </span>',
       '    <div class="specialization-items scanline-text flicker skill-item scanline-tex">',
-      '        <span class="custom-font skill-item flicker scanline-text">.✦ ݁ ABOUT      - Pulls my bio and system identity ✦ ݁</span>',
+      '        <span class="custom-font skill-item flicker scanline-text">.✦ ݁ ABOUT      - Pulls my bio and identity ✦ ݁</span>',
       '        <span class="custom-font skill-item flicker scanline-text">.✦ ݁ EDUCATION  -  Fetch academic records [M.S.E.C] ✦ ݁</span>',
       '        <span class="custom-font skill-item flicker scanline-text">.✦ ݁ TOOLS      -  List bunch of tools I use ✦ ݁</span>',
       '        <span class="custom-font skill-item flicker scanline-text">.✦ ݁ PROJECTS   - Project repository overview ✦ ݁</span>',
@@ -586,7 +586,7 @@ class VT340Terminal {
 
     const starContainer = document.createElement('div');
     starContainer.className = 'starfield-container';
-    // Set to absolute so it sits BEHIND your text
+    // Set to absolute so it sits BEHIND  text
     starContainer.style.position = 'absolute';
     starContainer.style.top = '0';
     starContainer.style.left = '0';
@@ -745,12 +745,12 @@ class VT340Terminal {
       '    ',
       '    <div class="education-detail flicker skill-item scanline-text">',
       '      <span class="custom-font skill-item flicker scanline-text">Bachelor of Engineering in Computer Science</span>',
-      '      <span class="custom-font dim glow-text flicker skill-item scanline-text">CGPA: 8.13/10</span>',
+      '      <span class="custom-font dim glow-text flicker skill-item scanline-text">CGPA: 8.09/10</span>',
       '    </div>',
       '    ',
       '    <div class="education-detail flicker skill-item scanline-text">',
       '    <div class="education-coursework flicker skill-item scanline-text">',
-      '        <span class="story-paragraph flicker scanline-text" style="visibility:hidden;"> 𓁍 Yeah, I didn’t add my schooling stuff.I’m not the brightest, there’s no heroic academic arc here, and nothing worth dramatizing.I learned slowly, messed up a lot, and still do.But I know my stuff now, I’m building real things, documenting the process, and I actually understand what I’m doing — which matters more to me and And yeah………(¬_¬")… I still had four lines left,so here’s some yapping.Since you’re already here, I just want to mention this movie <a href="https://www.youtube.com/watch?v=PF314tV8Qf0" class="github-link flicker" target="_blank">⏾⋆.˚ARUVI.˚🛰</a>  A lot of people don’t like it (including my friends), but for some strange reason it really worked for me.It’s messy, uncomfortable — and maybe that’s exactly why it stuck. </span>',
+      '        <span class="story-paragraph flicker scanline-text" style="visibility:hidden;"> 𓁍 Yeah, I skipped adding my school education because this portfolio is mainly about what I built during college,I messed up a lot, and still do.But I know my stuff now, I’m building real things, documenting the process, and I actually understand what I’m doing  which matters more to me and And yeah………(¬_¬")… I still had four lines left,so.....Since you’re already here, I just want to mention this movie <a href="https://www.youtube.com/watch?v=PF314tV8Qf0" class="github-link flicker" target="_blank">⏾⋆.˚ARUVI.˚🛰</a>  A lot of people don’t like it (including my friends), but for some strange reason it really worked for me.It’s messy, uncomfortable — and maybe that’s exactly why it stuck. </span>',
       '      </div>',
       '    </div>',
       '  </div>',
@@ -773,13 +773,13 @@ class VT340Terminal {
       '  <span class="custom-font skills-header glow-text flicker ">>_ TOOLS & TECHNOLOGIES I ACTUALLY USED  𓀓𓀝 ⋆｡°✩⋆⭒˚.⋆⋆✴︎˚｡⋆*ੈ✩‧₊⋆.˚ ☾⭒.˚˚⌯✈︎</span>',
       '  <div class="education-header skill-item flicker scanline-text">',
       '  <div class="skills-category skill-item flicker scanline-text">',
-      '    <span style="visibility:hidden;" class="story-paragraph flicker  scanline-text">(˶ᵔ ᵕ ᵔ˶) To be honest, if you’re just here for a quick check and don’t want all this yapping,you can always download my resume by typing “resume”.Anywaysss, let me continue — this section is basically a chronological mess of my phases.</span>',
+      '    <span style="visibility:hidden;" class="story-paragraph flicker  scanline-text">(˶ᵔ ᵕ ᵔ˶) To be honest, if you’re just here for a quick check and don’t want all this yapping,you can always download my resume by typing “resume”.Anywaysss, let me continue  this section is basically a mess of my clg phase.</span>',
       '  <div class=" skill-item flicker scanline-text">',
-      '    <span style="visibility:hidden;" class="story-paragraph  flicker  scanline-text">It all started with Linux.I tried Arch the hard way, broke my PC more times than I can count,spent almost an entire semester just customizing, distro hopping, Hyprland setups.I’m comfortable with Linux now — operating systems, bootloaders, kernels,and breaking things.Then theory of computation and compiler design hooked me.I built a full repository for Anna University’s compiler design lab experiments.I tried to make a Extension for Zoho cliq competition and I messed up (╥‸╥)</span>',
+      '    <span style="visibility:hidden;" class="story-paragraph  flicker  scanline-text">It all started with Linux.I tried Arch the hard way, broke my PC more times than I can count,spent almost an entire semester just customizing, distro hopping, Hyprland setups.I’m comfortable with Linux now operating systems, bootloaders,and breaking things.Then theory of computation and compiler design hooked me.I built a full repository for Anna University’s compiler design lab experiments.I tried to make a Extension for Zoho cliq competition and I messed up (╥‸╥)</span>',
       '  <div class=" skill-item flicker scanline-text">',
       '    <span style="visibility:hidden;" class=" story-paragraph  flicker  scanline-text">Somewhere in between, a friend introduced me to Android Studio.I made several very broken mobile apps:a music player I still don’t know how to fix,a broken chess app,and a CGPA calculator I made for myself so I’d stop calculating grades manually.(I forgot to handle a C grade.Why are you guys getting C grades anyway? Please do better ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧.</span>',            
       '  <div class="skills-category skill-item flicker scanline-text">',
-      '    <span style="visibility:hidden;" class=" story-paragraph  flicker  scanline-text">For about a semester, I just messed around with mobile apps for fun.Then I got really bored of web development.Next semester, network security clicked.I did basic home lab networking, Kali Linux stuff,played with Wireshark, Nmap, Python, and Bash.Then for half a semester, I did nothing productive and just played basketball.Now, in my final year, I’m working with Blender — making low-poly assets,doing basic animations, and moving everything into Unreal Engine.The goal is to wrap up this semester by building a game prototype.I’m slowly getting the hang of it… and yeah, that’s pretty much the journey so far ^._.^ฅ.</span>',
+      '    <span style="visibility:hidden;" class=" story-paragraph  flicker  scanline-text">For about a semester, I just messed around with mobile apps for fun.Then I got really bored of web development.Next semester,participating on hackathons running clubs while network security clicked.I did basic home lab networking, Kali Linux stuff,played with Wireshark, Nmap, Python, and Bash.Then for half a semester, I did nothing productive and just played basketball went for tournaments.Now, in my final year, I’m working with Blender making low-poly assets,doing basic animations, and moving everything into Unreal Engine.The goal is to wrap up this semester by building a game prototype.I’m slowly getting the hang of it… and yeah, that’s pretty much the journey so far ^._.^ฅ.</span>',
       '  </div>',
       '</div>'
     ].join('\n');
@@ -802,9 +802,29 @@ class VT340Terminal {
       '    <div class="project-details flicker">',
       '      <div class="detail-item flicker skill-item scanline-text"><span class="detail-text">Right now, we are writing a daily devlog for our final year project, “The Pious Child”.Feel free to check it out — and yeah, I appreciate the time you spent reading all this.</span></div>',
       '    </div>',
-      '      <div class="flow-container flicker">',
-      '        <div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/The-Pious-Child" class="github-link flicker" target="_blank">⏾⋆.˚THE-PIOUS-CHILD.˚🛰</a></div><div class="flow-arrow"></div><div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/CompilerDesign-University-Lab-Suite" class="github-link flicker" target="_blank">⏾⋆.˚COMPILERDESIGN-UNIVERSITY-LAB-SUITE.˚🛰</a></div><div class="flow-arrow"></div><div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/Retro-Portfolio" class="github-link flicker" target="_blank">⏾⋆.˚RETRO-PORTFOLIO.˚🛰</a></div><div class="flow-box flicker"> <a href="https://optical.toys/disappearing-bicyclist/" class="github-link flicker" target="_blank">˗ˏˋ ✉︎ ˎˊ˗</a></div>',
-      '      </div>',
+'      <div class="flow-container flicker">',
+
+'        <div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/The-Pious-Child" class="github-link flicker" target="_blank">⏾⋆.˚THE-PIOUS-CHILD.˚🛰</a></div>',
+'        <div class="flow-arrow"></div>',
+
+'        <div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/CompilerDesign-University-Lab-Suite" class="github-link flicker" target="_blank">⏾⋆.˚COMPILER-LAB-SUITE.˚🛰</a></div>',
+'        <div class="flow-arrow"></div>',
+
+'        <div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/Retro-Portfolio" class="github-link flicker" target="_blank">⏾⋆.˚RETRO-PORTFOLIO.˚🛰</a></div>',
+'        <div class="flow-arrow"></div>',
+
+'        <div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/ARP-Sage" class="github-link flicker" target="_blank">⏾⋆.˚ARP-SAGE.˚🛰</a></div>',
+'        <div class="flow-arrow"></div>',
+
+'        <div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/Kurippugal-Editor" class="github-link flicker" target="_blank">⏾⋆.˚KURIPPUGAL.˚🛰</a></div>',
+'        <div class="flow-arrow"></div>',
+
+'        <div class="flow-box flicker"><a href="https://github.com/Gappyjosuke/Networking-Field-Notes" class="github-link flicker" target="_blank">⏾⋆.˚NETWORKING-JOURNAL.˚🛰</a></div>',
+'        <div class="flow-arrow"></div>',
+
+'        <div class="flow-box flicker"><a href="https://optical.toys/disappearing-bicyclist/" class="github-link flicker" target="_blank">˗ˏˋ ✉︎ ˎˊ˗</a></div>',
+
+'      </div>',
       '    </div>',
       '  </div>',
       '</div>'
