@@ -1,5 +1,8 @@
-[ LIVE ](https://gappyjosuke.github.io/Retro-Portfolio/)
-<div align="justify">
+<h1 align="center">
+  <a href="https://gappyjosuke.github.io/Retro-Portfolio/">
+     Live Portfolio
+  </a>
+</h1>
 
 # Retro Portfolio Development Log
 **Project Status :** Legacy (Maintenance Mode)  
