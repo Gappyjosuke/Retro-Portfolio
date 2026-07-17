@@ -1,7 +1,7 @@
 [ LIVE ](https://gappyjosuke.github.io/Retro-Portfolio/)
 <div align="justify">
 
-# Portfolio Dev Log: The VT340 Journey
+# Retro Portfolio Development Log
 **Project Status :** Legacy (Maintenance Mode)  
 **Focus :** Retro CRT Emulation & Terminal UI/UX
 
@@ -109,13 +109,13 @@ As the project grew, the code became a "living document" of my learning process.
 > **Managing Asynchronous Audio & Text**
 
 #
-One of the hardest technical hurdles was syncing the [typewriter effect](https://en.wikipedia.org/wiki/Typewriter_style) with the audio. If a user spammed the "Next" button, the sounds would overlap and create "audio ghosting." I had to implement a [nuclear kill-switch](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/pause) using `async/await` to ensure that every audio thread and typing loop was terminated instantly upon navigation.
+One of the hardest technical hurdles was syncing the [typewriter effect](https://en.wikipedia.org/wiki/Typewriter_style) with the audio. If a user spammed the "Next" button, the sounds would overlap and create "audio ghosting." I had to implement a [I implemented cancellation logic using async/await to stop active typing and audio whenever users navigated between sections.](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/pause) using `async/await` to ensure that every audio thread and typing loop was terminated instantly upon navigation.
 
 ---
 
 <a name="chapter-6"></a>
 ## <font color="#16A085">Chapter 6</font>
-> **Deep Space Protocol**
+> **Procedural Starfield**
 
 <div align="center">
   <img src="/Media/starfield_demo.gif" width="600" alt="Starfield Animation">
@@ -134,9 +134,7 @@ To prevent the terminal from feeling "dead" when empty, I created the Deep Space
 
 I’ve updated this portfolio every six months for years, and it was a great way to learn. But honestly, Web Development has started to feel boring. I’m pretty much done with further updates to this project. 
 
-I’ve shifted my focus entirely to **Game Development**, where I can work with more complex rendering and logic. If you want to see what I’m working on now, check out my current project:
-
-**[The Pious Child](https://github.com/Gappyjosuke/the-pious-child)**
+This project is no longer under active development. It remains online as a snapshot of what I built and learned during college as a beginner. My current interests have shifted toward networking
 
 ---
 
